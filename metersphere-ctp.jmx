@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="TestPlan" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="82f26c39" enabled="true">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">1</intProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <CriticalSectionController guiclass="CriticalSectionControllerGui" testclass="CriticalSectionController" testname="Csc_ctp7" enabled="true">
+          <stringProp name="CriticalSectionController.lockName">global_lock_52fc9b59</stringProp>
+        </CriticalSectionController>
+        <hashTree>
+          <org.apache.jmeter.ctp.client.jmeter.CtpFtdSampler guiclass="org.apache.jmeter.ctp.client.jmeter.CtpFtdSamplerUI" testclass="org.apache.jmeter.ctp.client.jmeter.CtpFtdSampler" testname="ctp" enabled="true">
+            <stringProp name="MS-ID"></stringProp>
+            <stringProp name="MS-RESOURCE-ID">6b45c21b-7908-fc9e-25de-87ad793a103c_1</stringProp>
+            <stringProp name="MS-SCENARIO">[&quot;ca7f54ff-998b-44e2-a411-870030cf41c6_ctp7&quot;]</stringProp>
+            <stringProp name="server_ip">180.169.50.133</stringProp>
+            <stringProp name="port">42205</stringProp>
+            <stringProp name="product_id">cu2311</stringProp>
+            <stringProp name="price">65577</stringProp>
+            <stringProp name="scenarioId">ca7f54ff-998b-44e2-a411-870030cf41c6</stringProp>
+            <stringProp name="scenarioName">ctp7</stringProp>
+            <stringProp name="stepName">ctp</stringProp>
+            <stringProp name="stepType">CTP 请求</stringProp>
+            <stringProp name="projectId">c9464f77-e42f-4b21-8531-58d5dc4bfa3a</stringProp>
+            <stringProp name="RESULT_CLASS">org.apache.jmeter.samplers.SampleResult</stringProp>
+          </org.apache.jmeter.ctp.client.jmeter.CtpFtdSampler>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="RunningDebugSampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
